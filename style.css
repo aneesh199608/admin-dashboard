@@ -17,7 +17,6 @@ h3 {
     background-color: white;
     box-shadow: 0px 1px 10px #888888;
     grid-row: 1 / 2;
-    border: black solid 1px;
     position: sticky;
     top: 0;
     height: 128px;
@@ -30,6 +29,20 @@ h3 {
     align-items: center;
     height: 64px;
 }
+
+.search-bar input {
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5; /* Light background */
+    border-radius: 24px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 400px;
+    height: 24px;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease-in-out;
+}
+
 
 .profile-bar {
     display: flex;
@@ -60,6 +73,22 @@ h3 {
     justify-content: space-between;
     padding: 0 24px;
     align-items: center;
+}
+
+.welcome-user-buttons button {
+        background-color: rgb(26, 85, 148);
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 24px;
+        cursor: pointer;
+}
+
+.welcome-user-buttons button:hover {
+    background-color: #1565c0; 
+    
 }
 
 .welcome-user-container {
@@ -103,7 +132,7 @@ h3 {
     left: 0;
     grid-column: 1 / 2;
     grid-row: 1 /4;
-    height: 100%;
+    height: 100vh;
     /* display: flex;
     flex-direction: column; */
     /* display: grid;
@@ -155,6 +184,7 @@ h3 {
 .sidebar-contents-list:hover {
     background-color: rgba(255,255,255, 0.1);
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .sidebar-contents-list h2 {
@@ -168,10 +198,11 @@ h3 {
 }
 
 .main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, clamp(600px, 85%, 800px));
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, clamp(600px, 85%, 800px));
+    grid-template-rows: 1fr 1fr; */
     background-color:rgb(232, 243, 255);
+    height: 100vh;
 }
 
 .projects-list {
@@ -190,6 +221,12 @@ h3 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
   
+}
+
+.side-main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 .project-upper {
@@ -229,6 +266,7 @@ h3 {
     flex-direction: column;
     margin: 0;
     padding: 12px 24px;
+    height: auto;
 }
 
 .announcements-container {
@@ -239,6 +277,7 @@ h3 {
     border-radius: 16px;
     flex-direction: column;
     gap: 16px;
+    overflow-y: auto;
 }
 
 .announcements-grid{
@@ -258,11 +297,11 @@ h3 {
 }
 
 .trending-list {
-    grid-area: 2 / 2 / 3 / 3 ;
     display: flex;
     flex-direction: column;
     padding: 12px 24px;
     margin: 0;
+    height: auto;
 }
 
 .trending-item {
@@ -295,7 +334,8 @@ h3 {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    gap: 16px
+    gap: 16px;
+    overflow-y: auto;
 }
 
 
