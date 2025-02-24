@@ -1,5 +1,7 @@
 Project: Admin Dashboard
 
+LIVE DEMO - https://aneesh199608.github.io/admin-dashboard/
+
 This is a modern, responsive Admin Dashboard built as part of The Odin Project. The goal was to practice CSS Grid, Flexbox, and UI styling techniques to create a professional-looking layout.
 
 Features
